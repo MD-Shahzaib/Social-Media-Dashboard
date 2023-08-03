@@ -4,7 +4,7 @@ const mockData = {
         posts: 50,
         likes: 5000,
         comments: 1000,
-        engagementRate: 75,
+        engagementRate: "75%",
     },
     chartData: {
         labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

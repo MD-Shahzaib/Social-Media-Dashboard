@@ -2,8 +2,8 @@ import React from 'react';
 
 const MetricsDisplay = ({ followers, posts, likes, comments, engagementRate }) => {
     return (
-        <div>
-            <h2>Metrics Display</h2>
+        <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h2 className="text-lg font-semibold mb-4">Metrics Display</h2>
             <p>Followers: {followers}</p>
             <p>Posts: {posts}</p>
             <p>Likes: {likes}</p>
@@ -12,7 +12,7 @@ const MetricsDisplay = ({ followers, posts, likes, comments, engagementRate }) =
             <div className="flex items-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex-shrink-0">
                     <div className="flex items-center justify-center h-full">
-                        <span className="text-white text-2xl">{engagementRate}%</span>
+                        <span className="text-white text-2xl">{engagementRate}</span>
                     </div>
                 </div>
                 <div className="ml-4">
