@@ -1,59 +1,52 @@
-import React from "react"
-// Images
-import facebook from "../images/icon-facebook.svg"
-import twitter from "../images/icon-twitter.svg"
-import instagram from "../images/icon-instagram.svg"
-import youtube from "../images/icon-youtube.svg"
-import up from "../images/icon-up.svg"
-import down from "../images/icon-down.svg"
+import React from 'react';
+import FollowerCard from './FollowerCard';
+import facebook from '../images/icon-facebook.svg';
+import twitter from '../images/icon-twitter.svg';
+import instagram from '../images/icon-instagram.svg';
+import youtube from '../images/icon-youtube.svg';
 
 const Followers = () => {
   return (
-    <section className="relative z-10 max-w-7xl mx-auto py-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <section className="relative z-10 max-w-7xl mx-auto pb-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 border-r-900">
 
-      {/* article 1 */}
-      <article className="bg-slate-200 dark:bg-slate-800 p-5 rounded-lg shadow shadow-slate-50 dark:shadow-slate-700 border-t-8 border-blue-600">
-        <ul className="flex items-center justify-center text-center">
-          <li><img src={facebook} alt="Facebook" className="mr-2" /></li>
-          <li className="text-sm text-slate-600 dark:text-slate-400 font-bold">@nathanf</li>
-        </ul>
-        <h2 className="text-5xl font-bold text-slate-800 dark:text-white text-center my-5">1987 <span className="text-sm block text-slate-600 dark:text-slate-400 font-normal uppercase tracking-widest">Followers</span></h2>
-        <p className="text-center text-emerald-600 flex items-center justify-center text-sm font-bold"><img src={up} alt="" className="mr-2 w-3" />12 today</p>
-      </article>
-
-      {/* article 2 */}
-      <article className="bg-slate-200 dark:bg-slate-800 p-5 rounded-lg shadow shadow-slate-50 dark:shadow-slate-700 border-t-8 border-blue-500">
-        <ul className="flex items-center justify-center text-center">
-          <li><img src={twitter} alt="Twitter" className="mr-2" /></li>
-          <li className="text-sm text-slate-600 font-bold dark:text-slate-400">@nathanf</li>
-        </ul>
-        <h2 className="text-5xl font-bold text-slate-800 dark:text-white text-center my-5">1044 <span className="text-sm block text-slate-600 dark:text-slate-400 font-normal uppercase tracking-widest">Followers</span></h2>
-        <p className="text-center text-emerald-600 flex items-center justify-center text-sm font-bold"><img src={up} alt="" className="mr-2 w-3" />99 today</p>
-      </article>
-
-      {/* article 3 */}
-      <article className="bg-slate-200 dark:bg-slate-800 p-5 rounded-lg shadow shadow-slate-50 dark:shadow-slate-700 relative">
-        <div className="instagram h-2 w-full rounded-tl-lg rounded-tr-lg absolute top-0 left-0"></div>
-        <ul className="flex items-center justify-center text-center">
-          <li><img src={instagram} alt="Instagram" className="mr-2" /></li>
-          <li className="text-sm text-slate-600 dark:text-slate-400 font-bold">@realnathanf</li>
-        </ul>
-        <h2 className="text-5xl font-bold text-slate-800 dark:text-white text-center my-5">11k <span className="text-sm block text-slate-600 font-normal uppercase tracking-widest">Followers</span></h2>
-        <p className="text-center text-emerald-600 flex items-center justify-center text-sm font-bold"><img src={up} alt="" className="mr-2 w-3" />1099 today</p>
-      </article>
-
-      {/* article 3 */}
-      <article className="bg-slate-200 dark:bg-slate-800 p-5 rounded-lg shadow shadow-slate-50 dark:shadow-slate-700 border-t-8 border-red-700">
-        <ul className="flex items-center justify-center text-center">
-          <li><img src={youtube} alt="YouTube" className="mr-2" /></li>
-          <li className="text-sm text-slate-600 dark:text-slate-400 font-bold">Nathan F.</li>
-        </ul>
-        <h2 className="text-5xl font-bold text-slate-800 dark:text-white text-center my-5">8239 <span className="text-sm block text-slate-600 dark:text-slate-400 font-normal uppercase tracking-widest">subscribers</span></h2>
-        <p className="text-center text-rose-600 flex items-center justify-center text-sm font-bold"><img src={down} alt="" className="mr-2 w-3" />144 today</p>
-      </article>
-
+      <FollowerCard
+        icon={facebook}
+        username="nathanf"
+        count={1987}
+        countLabel="Followers"
+        todayCount={12}
+        isUp={true}
+        highlighter={"border-blue-600"}
+      />
+      <FollowerCard
+        icon={instagram}
+        username="realnathanf"
+        count={"11K"}
+        countLabel="Followers"
+        todayCount={1099}
+        isUp={true}
+        highlighter={"border-pink-500"}
+      />
+      <FollowerCard
+        icon={twitter}
+        username="nathanf"
+        count={1044}
+        countLabel="Followers"
+        todayCount={99}
+        isUp={true}
+        highlighter={"border-blue-500"}
+      />
+      <FollowerCard
+        icon={youtube}
+        username="NathanF."
+        count={8239}
+        countLabel="subscribers"
+        todayCount={144}
+        isUp={false}
+        highlighter={"border-red-700"}
+      />
     </section>
-  )
-}
+  );
+};
 
 export default Followers;

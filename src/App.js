@@ -51,9 +51,9 @@ const App = () => {
 
   return (
     <div className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-5">
         <Header />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-5">
           <MetricsDisplay {...metrics} />
           <Charts data={chartData} />
           <UserInformation {...user} />

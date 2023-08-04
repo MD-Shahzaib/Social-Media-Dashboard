@@ -22,6 +22,18 @@ const mockData = {
     user: {
         username: 'John Doe',
         email: 'johndoe@example.com',
+        age: 30,
+        city: 'New York',
+        country: 'USA',
+        occupation: 'Software Engineer',
+        hobbies: ['Coding', 'gaming'],
+        isSubscribed: true,
+        profilePicture: 'https://example.com/profile-pic.jpg',
+        socialMedia: {
+            twitter: '@johndoe',
+            instagram: 'johndoe_',
+            youtube: 'johndoe_1'
+        }
     },
 };
 

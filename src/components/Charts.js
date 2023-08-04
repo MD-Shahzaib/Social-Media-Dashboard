@@ -45,9 +45,9 @@ const Charts = ({ data }) => {
     }, [data]);
 
     return (
-        <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-            <h2 className="text-lg font-semibold mb-4">Charts</h2>
-            <canvas id="chart" />
+        <div className="bg-gray-800 rounded-lg p-4 shadow-lg">
+            <h2 className="text-xl font-semibold mb-4">Charts</h2>
+            <canvas id="chart" height="250" />
         </div>
     );
 };
