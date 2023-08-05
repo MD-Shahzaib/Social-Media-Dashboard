@@ -10,6 +10,7 @@ import Followers from './components/Followers';
 import Overview from './components/Overview';
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
   const [metrics, setMetrics] = useState({});
   const [chartData, setChartData] = useState({});
   const [user, setUser] = useState({});
@@ -17,57 +18,17 @@ const App = () => {
   const [overview, setOverview] = useState([]);
 
   useEffect(() => {
-    fetchMetrics();
-    fetchChartData();
-    fetchUser();
-    fetchOverview();
-    fetchFollowers();
+    fetchAllData();
   }, []);
 
-  const fetchMetrics = async () => {
+  const fetchAllData = async () => {
     try {
       // Simulating API request delay
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setMetrics(mockData.metrics);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const fetchChartData = async () => {
-    try {
-      // Simulating API request delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       setChartData(mockData.chartData);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const fetchUser = async () => {
-    try {
-      // Simulating API request delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       setUser(mockData.user);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const fetchFollowers = async () => {
-    try {
-      // Simulating API request delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       setFollowers(mockData.followers);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const fetchOverview = async () => {
-    try {
-      // Simulating API request delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       setOverview(mockData.overview);
     } catch (error) {
       console.error(error);
@@ -75,17 +36,17 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white">
+    <div className={darkMode ? "bg-gray-900 text-white" : "bg-slate-200 text-gray-900"}>
       <div className="container mx-auto px-5">
-        <Header />
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-5">
-          <MetricsDisplay {...metrics} />
-          <Charts data={chartData} />
-          <UserInformation {...user} />
+          <MetricsDisplay {...metrics} darkMode={darkMode} />
+          <Charts data={chartData} darkMode={darkMode} />
+          <UserInformation {...user} darkMode={darkMode} />
         </div>
-        <section className="py-10 dark:bg-slate-900">
-          <Followers followers={followers} />
-          <Overview overview={overview} />
+        <section className="py-10">
+          <Followers followers={followers} darkMode={darkMode} />
+          <Overview overview={overview} darkMode={darkMode} />
         </section>
       </div>
     </div>
@@ -93,12 +54,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-/*
-TODOS
-- App All Content into mockdata.
-- Chart content and variant.
-- dark/light mode.
-*/

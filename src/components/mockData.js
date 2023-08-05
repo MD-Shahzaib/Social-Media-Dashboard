@@ -17,23 +17,56 @@ const mockData = {
     chartData: {
         labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         values: [100, 200, 150, 300, 250],
+        options: ["bar", "pie", "radar", "polarArea", "doughnut", "line", "scatter", "bubble"],
     },
     user: {
-        username: 'John Doe',
-        email: 'johndoe@example.com',
-        age: 30,
-        city: 'New York',
-        country: 'USA',
+        username: 'MD-Shahzaib',
+        email: 'mdshahzaib36@gmail.com',
+        age: 20,
+        city: 'Karachi',
+        country: 'Pakistan',
         occupation: 'Software Engineer',
         hobbies: ['Coding', 'gaming'],
-        isSubscribed: true,
-        profilePicture: 'https://example.com/profile-pic.jpg',
-        socialMedia: {
-            twitter: '@johndoe',
-            instagram: 'johndoe_',
-            youtube: 'johndoe_1'
-        }
+        socialMedia: { instagram: '@msacoder', youtube: '@MsaCoder' }
     },
+    followers: [
+        {
+            icon: facebook,
+            username: "MsaCoder",
+            count: 1987,
+            countLabel: "Followers",
+            todayCount: 12,
+            rank: up,
+            highlighter: "border-blue-600",
+        },
+        {
+            icon: instagram,
+            username: "msacoder",
+            count: "11K",
+            countLabel: "Followers",
+            todayCount: 1099,
+            rank: up,
+            highlighter: "border-pink-500",
+        },
+        {
+            icon: twitter,
+            username: "MSCode",
+            count: 1044,
+            countLabel: "Followers",
+            todayCount: 99,
+            rank: up,
+            highlighter: "border-blue-500",
+        },
+        {
+            icon: youtube,
+            username: "MsaCoder",
+            count: 8239,
+            countLabel: "subscribers",
+            todayCount: 144,
+            rank: down,
+            highlighter: "border-red-700",
+        },
+    ],
     overview: [
         {
             title: "Page Views",
@@ -100,44 +133,6 @@ const mockData = {
             percentageIcon: down,
         },
     ],
-    followers: [
-        {
-            icon: facebook,
-            username: "nathanf",
-            count: 1987,
-            countLabel: "Followers",
-            todayCount: 12,
-            rank: up,
-            highlighter: "border-blue-600",
-        },
-        {
-            icon: instagram,
-            username: "realnathanf",
-            count: "11K",
-            countLabel: "Followers",
-            todayCount: 1099,
-            rank: up,
-            highlighter: "border-pink-500",
-        },
-        {
-            icon: twitter,
-            username: "nathanf",
-            count: 1044,
-            countLabel: "Followers",
-            todayCount: 99,
-            rank: up,
-            highlighter: "border-blue-500",
-        },
-        {
-            icon: youtube,
-            username: "NathanF",
-            count: 8239,
-            countLabel: "subscribers",
-            todayCount: 144,
-            rank: down,
-            highlighter: "border-red-700",
-        },
-    ]
 };
 
 export default mockData;
