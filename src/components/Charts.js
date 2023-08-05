@@ -16,7 +16,7 @@ const Charts = ({ data }) => {
         const ctx = document.getElementById('chart');
 
         const newChartInstance = new Chart(ctx, {
-            type: 'bar',
+            type: 'doughnut',
             data: {
                 labels: chartLabels,
                 datasets: [

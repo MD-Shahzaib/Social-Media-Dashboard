@@ -1,15 +1,6 @@
 import React from 'react';
 
-const UserInformation = ({
-    username,
-    email,
-    age,
-    city,
-    country,
-    occupation,
-    hobbies,
-    socialMedia
-}) => {
+const UserInformation = ({ username, email, age, city, country, occupation, hobbies, socialMedia }) => {
     return (
         <div className="bg-gray-800 rounded-lg p-4 shadow-lg">
             <h2 className="text-xl font-semibold mb-4">User Information</h2>
