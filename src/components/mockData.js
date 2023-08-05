@@ -15,9 +15,9 @@ const mockData = {
         engagementRate: "75%",
     },
     chartData: {
-        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        values: [100, 200, 150, 300, 250],
-        options: ["bar", "pie", "radar", "polarArea", "doughnut", "line", "scatter", "bubble"],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        values: [100, 200, 150, 320, 270, 190, 210, 160, 390, 250, 300, 250],
+        options: ["bar", "pie", "radar", "polarArea", "doughnut", "line"],
     },
     user: {
         username: 'MD-Shahzaib',
