@@ -24,12 +24,12 @@ const ChartTypesDropdown = ({ onChange, option, darkMode }) => {
     };
 
     return (
-        <div className="relative inline-block" ref={dropdownRef}>
+        <div className="relative inline-block mt-1" ref={dropdownRef}>
             <button
                 className={`${darkMode ? "bg-slate-700 hover:bg-slate-800 text-white" : "bg-slate-300 hover:bg-slate-200 text-gray-800"} font-semibold py-1 px-2 rounded text-sm`}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                Select Chart Type
+                Chart Type
             </button>
             {isOpen && (
                 <div className={`absolute z-10 mt-2 py-2 w-32 ${darkMode ? "bg-slate-800 border-slate-900" : "bg-slate-100 border-gray-300"} border rounded`}>
